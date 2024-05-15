@@ -42,8 +42,7 @@ public class Consumer {
 
         HttpEntity<Map<String, String>> putRequest = new HttpEntity<>(jsonToSend, headers);
         String putUrl = "http://94.198.50.185:7081/api/users";
-        sb.append(restTemplate.exchange(putUrl, HttpMethod.PUT, putRequest, String.class)
-                .getBody() );
+        sb.append(restTemplate.exchange(putUrl, HttpMethod.PUT, putRequest, String.class).getBody() );
 
         HttpEntity<Map<String, String>> deleteRequest = new HttpEntity<>(headers);
         int id = 3;
